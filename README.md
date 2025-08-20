@@ -2,22 +2,6 @@
 
 A collection of lightweight C++ header-only libraries providing utilities for date and period management, string manipulation, mathematical operations, and general-purpose functions. These classes are designed to be modular, easy to integrate, and follow OOP principles for robust code.
 
-## Table of Contents
-- [Overview](#overview)
-- [Libraries](#libraries)
-  - [clsDate](#clsdate)
-  - [clsPeriod](#clsperiod)
-  - [clsString](#clsstring)
-  - [clsMath](#clsmath)
-  - [clsUtil](#clsutil)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Overview
 This repository contains a set of C++ utility classes implemented as header files, making them easy to include in any project. The libraries cover common tasks like date calculations, string processing, math checks, and utility functions for randomization and array handling. Built with encapsulation and modularity in mind, they support both static and instance-based methods for flexibility.
 
 These libraries are ideal for applications requiring efficient data handling, such as scheduling tools, text processors, or simple games.
