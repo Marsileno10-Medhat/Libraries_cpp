@@ -214,7 +214,7 @@ public:
     }
 
     /// @brief check if the date is invalid and print the message depending on the the invalid date.
-    static void IsInvalidDate(clsDate Date1, clsDate Date2) {
+    static bool IsInvalidDate(clsDate Date1, clsDate Date2) {
         if (!IsValidDate(Date1)) {
             cout << "Invalid date1 value, non-existent date.";
             return true;
@@ -223,7 +223,7 @@ public:
             cout << "Invalid date2 value, non-existent date.";
             return true;
         }
-        return false
+        return false;
     }
 
     /// @brief check if the Day is valid or not
