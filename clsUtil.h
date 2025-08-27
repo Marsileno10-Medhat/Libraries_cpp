@@ -9,10 +9,12 @@ class clsUtil {
 public:
 
     // Print a specific number of tabs
-    static void Tabs(short TabsNumber) {
+    static string Tabs(short TabsNumber) {
+        string Tabs = "";
         for (int i = 0; i < TabsNumber; i++) {
-            cout << "   ";
+            Tabs += "\t";
         }
+        return Tabs;
     }
 
     // Swaps the values of two integer variables by reference.
