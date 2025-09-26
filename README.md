@@ -61,6 +61,16 @@ General-purpose utilities for various tasks.
   - Array operations: print, fill with randoms, max/min, copy, shuffle, reverse, check existence, add elements.
   - Palindrome array checks.
 
+### clsInputValidate
+Provides robust input validation and reading for integers and doubles.
+
+- **Key Features**:
+  - Templated input reading for integers and doubles with customizable prompt messages.
+  - Input validation to ensure valid numeric input, handling non-numeric errors.
+  - Range validation for numbers within specified bounds (int or double).
+  - Error handling with user-friendly messages and re-prompting for invalid inputs.
+  - Integration with `clsUtil` for swapping range bounds.
+
 ## Installation
 These are header-only libraries, so no compilation is required. Simply:
 1. Clone the repository: `git clone https://github.com/yourusername/cpp-utility-libraries.git`
