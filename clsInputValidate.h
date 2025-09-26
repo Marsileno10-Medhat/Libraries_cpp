@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 #include "clsDate.h"
 #include "clsUtil.h"
 using namespace std;
@@ -23,7 +24,7 @@ public:
 
     // Read number wether it's int or double with custom message.
     template <typename T>
-    T ReadNumber(string Message) {
+    static T ReadNumber(string Message) {
         T Num = 0;
         cout << Message;
         cin >> Num;
@@ -40,27 +41,28 @@ public:
         return true;
     }
 
+    // template <typename T>
+    // static bool IsValidInputNumber(T& Number, string ErrorMessage) {
+    //      (!IsValidNumber()) {
+    //         Number = ReadNumber<T>(ErrorMessage);
+    //     }
+    //     return true;
+    // }
+
     template <typename T>
-    static T IsValidInputNumber(T Number, string ErrorMessage) {
-        T Num = Number;
+    static T ReadValidNumber(string RequestMessage, string ErrorMessage) {
+        T Num = ReadNumber<T>(RequestMessage);
         while (!IsValidNumber()) {
-            Num = ReadNumber(ErrorMessage);
+            Num = ReadNumber<T>(ErrorMessage);
         }
         return Num;
     }
 
     template <typename T>
-    static T ReadValidNumber(string RequestMessage, string ErrorMessage) {
-        T Num = ReadNumber(RequestMessage);
-        Num = IsValidInputNumber(Num, ErrorMessage);
-        return Num;
-    }
-
-    template <typename T>
     static T ReadNumberInRange(T From, T To, string RequestMessage, string ErrorMessage) {
-        T Num = ReadNumber(RequestMessage);
-        while (!IsNumberInRange(From, To, Num)) {
-            Num = IsValidInputNumber(Num, ErrorMessage);
+        T Num = ReadNumber<T>(RequestMessage);
+        while (!IsNumberInRange(From, To, Num) || !IsValidNumber()) {
+            Num = ReadNumber<T>(ErrorMessage);
         }
         return Num;
     }
